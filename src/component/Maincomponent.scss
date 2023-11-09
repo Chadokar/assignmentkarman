@@ -1,0 +1,94 @@
+/* src/App.scss */
+$small-screen: 768px;
+
+* {
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background: #333;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.sidebar {
+  background: #444;
+  color: #fff;
+  width: 20rem;
+}
+
+.btn {
+  display: none;
+}
+
+@media (max-width: $small-screen) {
+  .btn {
+    border-radius: 36px;
+    background: #f3f3f3;
+    color: #444;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1em;
+    display: block;
+    padding: 10px 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 60%;
+  }
+  .sidebar.btn-hnd {
+    display: none;
+  }
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+}
+
+.image-overlay {
+  position: relative;
+  text-align: center;
+  display: flex;
+}
+
+.image-overlay img {
+  max-width: 100%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
